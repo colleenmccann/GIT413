@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ced's Succulents</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Colleen (Ced) McCann">
+        <meta name="description" content="Browse different succulent plants to add to your garden!">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- included if I develop this later to be responsive -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer async></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- font import -->
+    </head>
+
+    <body>
+        <header>
+            <h1>Ced's Succulents</h1>
+            <p id="toggle-dark">Toggle Dark Mode</p>
+            <a href="#browse">Browse</a> <!-- will take user to "ced's collection" -->
+            <a href="#play">Play</a> <!-- will take user to the coupon guess game -->
+        </header>
+
+        <main>
+            <div id="parallax"></div>
+            <!--<img src="assets/succulent-arrangement.jpeg" alt="an arrangement of different types of succulent plants">--> <!-- made into background for parallax -->
+
+            <section id="about">
+                <h2>About Ced</h2>
+                <p>I became a plant aficionado around 2020 when I moved across the country from Chicago to Austin. I've always loved succulents, and moving to a very sunny area gave me the perfect opportunity to start growing some.
+                    When I first started collecting them, I couldn't keep any of them alive! Succulents are both very easy to take care of and difficult at the same time.
+                    Many require specific amounts of sunlight to prosper, but they often require very infrequent watering. Make sure to check out each plant to make sure its needs suit you!</p>
+            </section>
+
+            <section id="browse">
+                <h2>From Ced's Collection</h2>
+
+                <section id="plant1" class="display-item">
+                    <img src="assets/sempervivum-tectorum.jpeg" alt="a sempervivum tectorum hen-and-chick plant"> <!-- plant image -->
+                    <h3 class="plant-name">Sempervivum Tectorum</h3>
+                    <p class="price">$12.99</p>
+
+                    <h4>Why This Plant?</h4>
+                    <p>This plant is one of my all-time favorites! It's a hen-and-chick plant, meaning buds of the plant will often grow offshoots with new baby plants!
+                        As more of these offshoots grow, eventually they will also grow offshoots until you have a massive, beautiful collection of hens and chicks.
+                        These are easy to take care of, their biggest requirement being that they need consistent sunlight.</p>
+                </section>
+
+                <section id="plant2" class="hide-item">
+                    <img src="assets/graptopetalum-paraguyaense.jpeg" alt="a graptopetalum paraguayense, also known as the ghost plant"> <!-- plant image -->
+                    <h3 class="plant-name">Graptopetalum<br>Paraguayense</h3>
+                    <p class="price">$10.99</p>
+
+                    <h4>Why This Plant?</h4>
+                    <p>This plant is also one of my favorites, also known as a "ghost plant." Ghost plants grow very quickly and are one of the easiest plants to propagate, meaning that you can grow a plant off of a leaf quite easily!
+                        Once you have one ghost plant, you can have infinitely more just by propagating leaves. Their bluish tone is beautiful, making this one of my favorites to incorporate into arrangements.
+                        This plant needs IMMENSE amounts of sunlight to prevent stretching. If you don't live somewhere that gets a lot of direct sun, it's a good idea to invest in a plant-growing light.
+                        The ghost plant grows ridiculously fast and will stretch without enough light. Other than that, it's easy to take care of and can grow under virtually any conditions.</p>
+                </section>
+
+                <section id="plant3" class="hide-item">
+                    <img src="assets/haworthia-fasciata.jpeg" alt="a haworthia fasciata, also known as the zebra plant"> <!-- plant image -->
+                    <h3 class="plant-name">Haworthia Fasciata</h3>
+                    <p class="price">$13.99</p>
+
+                    <h4>Why This Plant?</h4>
+                    <p>Haworthias are my absolute favorite succulents. This is because they are nearly impossible to kill and can grow without intense sun. I'm good at knowing when to water my succulents, but getting them enough light is another story.
+                        I love keeping my succulents on my desk, but that's not a very sunny area! Haworthias grow slowly, so they won't stretch if they don't get enough light.
+                        This particular haworthia is known as the "zebra plant" due to its beautiful striped ridges! Be careful, haworthias are pointy!</p>
+                </section>
+
+                <section id="plant4" class="hide-item">
+                    <img src="assets/echeveria-lilacina.jpeg" alt="an echeveria lilacina"> <!-- plant image -->
+                    <h3 class="plant-name">Echeveria Lilacina</h3>
+                    <p class="price">$9.99</p>
+
+                    <h4>Why This Plant?</h4>
+                    <p>Echeverias are absolutely gorgeous. They come in lots of different colors and can grow to large diameters. They have thinner leaves that are often cooler-toned greens and blues.
+                        Echeverias aren't too hard to take care of, but may stretch without enough sun. While they don't need as much sun as a ghost plant, don't leave them in the shade! These plants don't require much water at all and can bounce back from drought easily.
+                        The echeveria lilacina is one of my favorite desk plants, and it's parked right under my grow light!</p>
+                </section>
+
+                <section id="browsing-buttons">
+                    <h3>View More Items</h3> <!-- to be hidden -->
+                    <button id="semp-button" class="selected">Sempervivum Tectorum</button>
+                    <button id="grapt-button" class="not-selected">Graptopetalum Paraguayense</button>
+                    <button id="hawo-button" class="not-selected">Haworthia Fasciata</button>
+                    <button id="eche-button" class="not-selected">Echeveria Lilacina</button>
+                </section>
+            </section>
+
+            <section id="play">
+                <h2>Play to win a coupon!</h2>
+
+                <section id="rules">
+                    <h3>How to Play</h3>
+                    <p>Enter a number between 1 and 10. If you match the correct number, you will win a discount code for your next purchase!</p>
+                </section>
+
+                <form id="game">
+                    <label for="number-input">Enter a number between 1 and 10!</label>
+                    <input type="number" name="number-input" id="number-input">
+                    <input type="submit" name="submit-guess" id="submit-guess" value="Guess!">
+                    <p id="win-lose-output">Try it now!</p>
+                    <span class="game-message"></span>
+                </form>
+            </section>
+
+            <section id="email-list">
+                <h2>Join our email list!</h2>
+                <p>Join our email list for exclusive deals, rewards, and the latest news on our collection! Email subscribers may receive coupons for purchases!
+                    Stay up to date on which plants are joining the collection!</p>
+                <form id="email-signup">
+                    <label for="name">Full Name:<span class="required">*</span></label>
+                    <span class="message"></span>
+                    <input type="text" id="name" name="name">
+
+                    <label for="phone">Phone Number:</label>
+                    <span class="message"></span>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="email">Email Address:</label>
+                    <span class="message"></span>
+                    <input type="email" id="email" name="email">
+
+                    <label for="comments">Any Comments?<span class="required">*</span></label>
+                    <span class="message"></span>
+                    <textarea rows="3" id="comments" name="comments"></textarea>
+
+                    <fieldset>
+                        <legend>How would you like to be notified about deals?<span class="required">*</span></legend>
+                        <label for="radio-phone">Phone</label>
+                        <input type="radio" name="preferred-contact" id="radio-phone">
+                        <label for="radio-email">Email</label>
+                        <input type="radio" name="preferred-contact" id="radio-email">
+                        <span id="radio-message" class="message"></span>
+                    </fieldset>
+
+                    <input type="submit" name="subscribe" id="subscribe" value="Subscribe">
+                </form>
+
+                <p id="display-info"></p>
+            </section>
+        </main>
+
+        <footer>
+            <h2>GIT417 Fall B 2022</h2>
+            <p>For educational purposes only.<br>
+            By Colleen "Ced" McCann</p>
+        </footer>
+    </body>
+</html>

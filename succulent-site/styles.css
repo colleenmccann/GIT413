@@ -1,0 +1,412 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+/* color palette variables */
+:root{
+    --midnight: #011638;
+    --cobalt: #364156;
+    --grey: #CDCDCD;
+    --teal: #DFF8EB;
+    --forest: #214E34;
+}
+
+/* start general styling */
+body{
+    width: 1280px;
+    margin: 0 auto;
+    font-family: Quicksand, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+}
+
+/* section-specific styling */
+
+/* HEADER */
+
+header{
+    background-color: var(--teal);
+    color: black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1{
+    font-size: 4em;
+    grid-column-start: span 3;
+    margin: 1em;
+}
+
+header p, header a{
+    padding: 1.5em;
+    transition: background-color 300ms;
+}
+
+header p:hover, header a:hover{
+    background-color: var(--forest);
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main{
+    background-color: white;
+    color: black;
+}
+
+main h2{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+}
+
+main section{
+    padding: 0 4em 4em;
+    line-height: 1.5em;
+}
+
+/* ABOUT */
+
+#about{
+    background-color: var(--teal);
+}
+
+#about p{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* BROWSE / PRODUCT SELECT */
+
+#browse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+}
+
+#browse img{
+    height: 200px;
+}
+
+#browse h2{
+    grid-column-start: span 2;
+    padding-bottom: 0;
+}
+
+/* displayed product */
+
+.display-item{
+    grid-column-start: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.display-item .price{
+    grid-column-start: 2;
+}
+
+.display-item h4{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    align-self: end;
+}
+
+.display-item img{
+    grid-row-start: span 2;
+    align-self: center;
+    border-radius: 4px;
+    filter:drop-shadow(10px 10px 5px #888888);
+}
+
+.display-item .plant-name{
+    justify-self: left;
+    align-self: end;
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.5em;
+}
+
+.display-item .price{
+    justify-self: left;
+    align-self: start;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.hide-item{
+    position: absolute;
+    left: -99999px;
+}
+
+/* product selection buttons */
+
+#browsing-buttons{
+    grid-column-start: span 2;
+}
+
+#browsing-buttons h3{
+    padding: 1em 0em;
+    align-self: start;
+    text-align: center;
+    font-weight: bold;
+}
+
+#browsing-buttons button{
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 1.5em 2.5em 2em;
+    transition: background-color 300ms, color 300ms, text-decoration 300ms;
+}
+
+.selected{
+    text-decoration: underline;
+    text-underline-offset: 1em;
+}
+
+#browsing-buttons button:hover{
+    background-color: var(--forest);
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 1em;
+}
+
+/* PLAY / NUMBER GUESS GAME */
+
+#play{
+    background-color: var(--teal);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#play h2{
+    grid-column-start: span 2;
+}
+
+#rules h3{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+#win-lose-output{
+    padding-top: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* game buttons and input */
+
+#game{
+    padding-top: 3em;
+    justify-self: center;
+}
+
+#number-input{
+    height: 2em;
+    width: 4em;
+    margin: 1em;
+    text-align: center;
+    font-family: inherit;
+}
+
+#submit-guess{
+    padding: 1em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--forest);
+    color: white;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+/* EMAIL LIST */
+
+#email-list{
+    background-color: var(--grey);
+    display: grid;
+}
+
+/* SUBSCRIBE FORM */
+
+#email-list form{
+    width: 40%;
+    background-color: white;
+    padding: 2em;
+    justify-self: center;
+    border-radius: 4px;
+    margin-top: 3em;
+}
+
+#phone, #email, #name, #comments{
+    padding: 1em;
+    margin: 1em;
+    width: 85%;
+}
+
+#comments{
+    height: 4em;
+}
+
+#subscribe{
+    margin-top: 2em;
+    padding: 1em 2em;
+    border-radius: 4px;
+    background-color: var(--forest);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#radio-phone, #radio-email{
+    margin-top: 1em;
+}
+
+footer{
+    background-color: var(--midnight);
+    color: white;
+    padding: 3em;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.25em;
+}
+
+/* JS-interactive */
+
+/* guessing game */
+.game-message{
+    text-align: center;
+}
+
+/* form validation */
+.game-message, .message, .required{
+    font-weight: bold;
+    color: red;
+}
+
+#display-info{
+    justify-self: center;
+    margin-top: 2em;
+}
+
+/* DARK MODE THEMING */
+.dark-mode{
+    background-color: var(--cobalt);
+    color: white;
+}
+
+.dark-mode header{
+    background-color: var(--midnight);
+    color: white;
+}
+
+.dark-mode header p, .dark-mode header a{
+    padding: 1.5em;
+    transition: background-color 300ms;
+}
+
+.dark-mode header p:hover, .dark-mode header a:hover{
+    background-color: var(--grey);
+    color: black;
+    cursor: pointer;
+}
+
+.dark-mode #about, .dark-mode #play{
+    background-color: var(--forest);
+    color: white;
+}
+
+.dark-mode #browse{
+    background-color: var(--cobalt);
+    color: white;
+}
+
+.dark-mode #browse button:hover{
+    background-color: var(--grey);
+    color: black;
+}
+
+.dark-mode #submit-guess{
+    background-color: var(--teal);
+    color: black;
+}
+
+.dark-mode #email-list{
+    background-color: var(--cobalt);
+    color: white;
+}
+
+.dark-mode #email-signup{
+    color: black;
+    background-color: var(--grey);
+}
+
+/* for parallax effect */
+#parallax{
+    background-image: url(assets/succulent-arrangement.jpeg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

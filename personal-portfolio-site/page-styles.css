@@ -1,0 +1,178 @@
+/* by colleen 'ced' mccann -- this css is OBFUSCATED as a precaution */
+/* if you would like to see my non-obfuscated css, contact me */
+/* email me at cmmccann237@gmail.com or colleen.ced.mccann@gmail.com OR find me at linkedin.com/in/colleenmccann3 */
+
+
+/* start css reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end css reset */
+
+/* start ced's code */
+
+:root{
+    --lightblue: #B8E5FF;
+    --lightgreen: #ABF8E7;
+    --grey: #555;
+}
+
+/* NOTE: i like to create medium (or tablet) sized styles first.
+this allows me to create a hybrid layout meant for tablets that is easily adjusted to create both desktop and mobile versions.
+i do this because i prefer to see all available features of a site (for desktop) while creating a design that can easily be made smaller (for mobile).
+it's just a method that i've found works best with my brain. mobile-first is great, but i prefer this sort of tablet-first approach. */
+
+/* general styling */
+body{
+    font-family: 'Dosis', Helvetica, sans-serif;
+    background-image: linear-gradient(30deg, var(--lightblue), var(--lightgreen));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    line-height: 1.25em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3em;
+    align-items: end;
+    background-color: #FCFCFC;
+    border-radius: 0.25em;
+}
+
+#katara{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    grid-row: span 3;
+    border-radius: 0.25em 0 0 0.25em;
+}
+
+#fence{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    grid-row: span 7;
+    border-radius: 0.25em 0 0 0.25em;
+}
+
+h1{
+    font-family: 'DotGothic16', Helvetica, sans-serif;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 2em 2em 0;
+}
+
+#intro, nav, main>ul{
+    padding: 0 3em;
+}
+
+#course-list{
+    list-style-type: square;
+    padding: 1em 3em;
+}
+
+#course-list a:hover{
+    text-decoration: underline;
+}
+
+#course-list>p{
+    font-size: 1.25em;
+}
+
+#most-relevant{
+    font-weight: bold;
+}
+
+.asu-courses{
+    margin: 1em 0;
+}
+
+#iit-courses{
+    margin: 1em 0;
+}
+
+nav{
+    margin: 4em 0;
+
+}
+
+nav h2{
+    position: fixed;
+    left: 99999px;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+nav ul li a{
+    padding: 1em;
+    background-color: var(--grey);
+    color: white;
+    margin: 0.25em;
+}
+
+nav ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: var(--lightblue);
+    transition: 0.25s;
+}

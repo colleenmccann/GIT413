@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Derivative Rules | A Tutor's Guide to Calculus</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Colleen McCann">
+        <meta name="description" content="Methods to derive functions that cannot be derived via the standard function. Includes methods for the sum, derivative, product, quotient, and chain rules.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="page-styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jmv0esy.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>A Tutor's Guide to Calculus</h1></a>
+            <p>For educational purposes only.<br>
+            Formula graphics made with the <a id="tex-link" href="https://atomurl.net/math/">TeX equation editor</a>.</p>
+        </header>
+
+        <main>
+            <nav>
+                <h2>Main Navigation</h2> <!-- hide -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="concepts.html">Understanding Derivatives &amp; Integrals</a></li>
+                    <li><a href="derivatives.html">Solving Derivatives</a></li>
+                    <li id="current-page"><a href="rules.html">Derivative Rules</a></li>
+                    <li><a href="integrals.html">Solving Integrals (Antiderivatives)</a></li>
+                    <!--<li><a href="using-calculators.html">Checking Answers with a Calculator</a></li>-->
+                </ul>
+            </nav>
+            
+            <h2>Derivative Rules</h2>
+
+            <section id="intro">
+                <h3>What are derivative rules?</h3>
+                <p>Derivative rules are used when the standard formula may not be applicable.</p>
+                <p>Say we have two functions <span class="inline-formula">f(x)</span> and <span class="inline-formula">g(x)</span>.
+                In certain situations, we have to follow specific strategies to find the derivative, which are called derivative rules.
+                Below is each rule and how they are applied to different situations you will encounter.</p>
+            </section>
+
+            <section id="sum-rule">
+                <h3>Sum Rule</h3>
+                <p>You've likely already used the sum rule without realizing it! It applies to functions with several appearances of a variable.</p>
+                <img class="rule-graphic" src="formulas/sum_rule1.png" alt="the format of functions that can use the sum rule">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="rule-graphic" src="formulas/sum_rule2.png" alt="result of applying the sum rule">
+            </section>
+            
+            <section id="difference-rule">
+                <h3>Difference Rule</h3>
+                <p>Like the sum rule, you've likely already used the difference rule! It's the same as the sum rule, but with subtraction.</p>
+                <img class="rule-graphic" src="formulas/difference_rule1.png" alt="the format of functions that can use the difference rule">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="rule-graphic" src="formulas/difference_rule2.png" alt="the result of applying the difference rule">
+            </section>
+
+            <section id="quotient-rule">
+                <h3>Quotient Rule</h3>
+                <p>The quotient rule has a very unique behavior:</p>
+                <img class="rule-graphic" src="formulas/quotient_rule1.png" alt="the format of functions that can use the quotient rule">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="rule-graphic" src="formulas/quotient_rule2.png" alt="the result of applying the quotient rule">
+                <p>This one looks intimidating, I know! When I took calculus, my teacher taught us a pnemonic device to help remember the quotient rule.
+                It doesn't make much sense out of context, but for some reason, it's' easy to remember.</p>
+                <img class="rule-graphic" src="formulas/quotient_pnemonic.png" alt="a pnemonic device to remember the application of the quotient rule">
+                <p>To translate this into something that makes sense, "lo" would be the denominator <span class="inline-formula">g(x)</span>, "d" means to take the derivative, and "hi" is the numerator <span class="inline-formula">f(x)</span>. Say this in your head as "low dee high minus high dee low over low squared".
+                So you take the lower function, multiply it by the derivative of the higher function, subtract the higher function multiplied by the derivative of the lower function, and then divide all of that by the square of the lower function.</p>
+            </section>
+
+            <section id="product-rule">
+                <h3>Product Rule</h3>
+                <p>The product rule also has its own unique behavior, but is a bit simpler than the quotient rule.
+                It might look hard to remember, but it's just multiplying the first function by the second function's derivative, then adding the second function multiplied by the first function's derivative.</p>
+                <img class="rule-graphic" src="formulas/product_rule1.png" alt="the format of a function that can use the product rule">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="rule-graphic" src="formulas/product_rule2.png" alt="the result of applying the product rule">
+            </section>
+
+            <section id="chain-rule">
+                <h3>Chain Rule</h3>
+                <p>The chain rule is used when  you have one function nested inside of another function. It generally helps to derive the nested function first.</p>
+                <img class="rule-graphic" src="formulas/chain_rule1.png" alt="the format of a nested function, which must use the chain rule">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="rule-graphic" src="formulas/chain_rule2.png" alt="the result of applying the chain rule">
+            </section>
+        </main>
+    </body>
+</html>

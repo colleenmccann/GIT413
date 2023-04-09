@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Solving Integrals | A Tutor's Guide to Calculus</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Colleen McCann">
+        <meta name="description" content="An explanation of basic integration; both indefinite and definite integrals are addressed.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="page-styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jmv0esy.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>A Tutor's Guide to Calculus</h1></a>
+            <p>For educational purposes only.<br>
+            Formula graphics made with the <a id="tex-link" href="https://atomurl.net/math/">TeX equation editor</a>.</p>
+        </header>
+
+        <main>
+            <nav>
+                <h2>Main Navigation</h2> <!-- hide -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="concepts.html">Understanding Derivatives &amp; Integrals</a></li>
+                    <li><a href="derivatives.html">Solving Derivatives</a></li>
+                    <li><a href="rules.html">Derivative Rules</a></li>
+                    <li id="current-page"><a href="integrals.html">Solving Integrals (Antiderivatives)</a></li>
+                    <!--<li><a href="using-calculators.html">Checking Answers with a Calculator</a></li>-->
+                </ul>
+            </nav>
+
+            <h2>Solving Integrals (Antiderivatives)</h2>
+
+            <section id="indefinite-integral">
+                <h3>Indefinite Integrals</h3>
+                <p>Just like when we derive functions, we can integrate functions with a general formula.
+                Integration can be a bit more complex, so this formula won't necessarily work for every function you encounter.
+                For now, let's just focus on basic integration. Integrals are denoted using</p>
+                <img class="formula-graphic" src="formulas/integration_icon.png" alt="the standard notation and symbols of a function to be integrated">
+                <p>To integrate a function, we use the formula</p>
+                <img class="formula-graphic" src="formulas/integrate_equation.png" alt="the formula to integrate basic, non-special functions">
+                <p>Note the <span class="inline-formula">+ C</span> at the end of the function. That <span class="inline-formula">C</span> represents a constant number.
+                Remember that deriving a constant will always yield zero. Therefore, when we integrate a function, it is impossible to know for sure if there would be a constant added or subtracted from a function.
+                If this confuses you, keep in mind that adding a constant to a function only shifts a function! That number does not affect the slope, so we don't have to know its exact value.
+                <strong>Don't forget to add the constant; most graders will deduct points if it's left out!</strong></p>
+                
+                <p>Integration is the literal opposite of derivation, so it may help to approach a function with the mindset of "What function would have this as its derivative?"
+                In other words, reverse the steps of derivation!</p>
+            </section>
+            
+            <section id="definite-integral">
+                <h3>Definite Integrals</h3>
+                <p>Integration can also be used to find the value of the area between a function and the x-axis. These are called definite integrals. In these cases, you will be given values to plug into the function once it is integrated.
+                These will appear near the integration symbol with the first value below the second. Once you've derived the function, plug in the values; subtract the result of plugging in the lower value from the result of plugging in the upper value.</p>
+                <img class="formula-graphic" src="formulas/definite_integral.png" alt="an example of what a definite integral looks like">
+                <p>If you are in an AP course and plan on taking AP exams, here is a bit of advice: you do NOT need to solve the function down to a single number. If you end up with an equation of constants, you don't need to go through solving it.
+                The AP exam graders know that you understand how to add, divide, use exponents, etc. so it can be a big time saver on that AP exam to leave your answer as <span class="inline-formula">1 + 2 * 3</span> instead of taking the time to solve it and write <span class="inline-formula">7</span>.
+                This tidbit is a massive time saver and removes the possibility of making errors in arithmetic after you've integrated a function correctly.</p>
+            </section>
+        </main>
+    </body>
+</html>

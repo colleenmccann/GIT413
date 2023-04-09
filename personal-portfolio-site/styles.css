@@ -1,0 +1,186 @@
+/* by colleen 'ced' mccann -- this css is OBFUSCATED as a precaution */
+/* if you would like to see my non-obfuscated css, contact me */
+/* email me at cmmccann237@gmail.com or colleen.ced.mccann@gmail.com OR find me at linkedin.com/in/colleenmccann3 */
+
+
+/* start css reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end css reset */
+
+/* start ced's code */
+
+:root{
+    --lightblue: #B8E5FF;
+    --lightgreen: #ABF8E7;
+    --grey: #555;
+}
+
+/* NOTE: i like to create medium (or tablet) sized styles first.
+this allows me to create a hybrid layout meant for tablets that is easily adjusted to create both desktop and mobile versions.
+i do this because i prefer to see all available features of a site (for desktop) while creating a design that can easily be made smaller (for mobile).
+it's just a method that i've found works best with my brain. mobile-first is great, but i prefer this sort of tablet-first approach. */
+
+/* general styling */
+body{
+    font-family: 'Dosis', Helvetica, sans-serif;
+    background-image: linear-gradient(30deg, var(--lightblue), var(--lightgreen));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    line-height: 1.25em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#grid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    margin: 3em;
+    align-items: center;
+    background-color: #FCFCFC;
+    border-radius: 0.25em;
+}
+
+#ireland{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    grid-row: span 2;
+    border-radius: 0.25em 0 0 0.25em;
+}
+
+header{
+    margin: 1em 1em 0 1em;
+    padding: 2em 2em 0 2em;
+}
+
+h1{
+    font-family: 'DotGothic16', Helvetica, sans-serif;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+main{
+    margin: 0em 1em;
+    padding: 1em 2em;
+}
+
+nav{
+    margin-bottom: 1em;
+}
+
+nav h2{
+    position: fixed;
+    left: 99999px;
+}
+
+nav ul li{
+    padding: 1em 1.5em;
+    background-color: var(--grey);
+    margin: 0.5em 0;
+    color: white;
+    font-family: 'DotGothic16', Helvetica, sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+}
+
+nav ul li:hover{
+    background-color: var(--lightblue);
+    color: black;
+    transition: 0.25s;
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 1.25em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+footer{
+    margin: 2em 0;
+}
+
+footer h2{
+    font-family: 'DotGothic16', Helvetica, sans-serif;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: stretch;
+    grid-gap: 1em;
+}
+
+footer ul li{
+    margin: 1em 0;
+    background-color: var(--grey);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+footer ul li:hover{
+    background-color: var(--lightgreen);
+    color: black;
+    transition: 0.25s;
+    font-weight: bold;
+}

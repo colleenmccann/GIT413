@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Understanding Derivatives &amp; Integrals | A Tutor's Guide to Calculus</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Colleen McCann">
+        <meta name="description" content="An explanation of the fundamental calculus concepts of derivatives and integrals and how they relate to content users may be familiar with.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="page-styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jmv0esy.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>A Tutor's Guide to Calculus</h1></a>
+            <p>For educational purposes only.<br>
+            Formula graphics made with the <a id="tex-link" href="https://atomurl.net/math/">TeX equation editor</a>.</p>
+        </header>
+
+        <main>
+            <nav>
+                <h2>Main Navigation</h2> <!-- hide -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li id="current-page"><a href="concepts.html">Understanding Derivatives &amp; Integrals</a></li>
+                    <li><a href="derivatives.html">Solving Derivatives</a></li>
+                    <li><a href="rules.html">Derivative Rules</a></li>
+                    <li><a href="integrals.html">Solving Integrals (Antiderivatives)</a></li>
+                    <!--<li><a href="using-calculators.html">Checking Answers with a Calculator</a></li>-->
+                </ul>
+            </nav>
+
+            <h2>Understanding Derivatives &amp; Integrals</h2>
+
+            <section id="explain-deriving">
+                <h3>Derivatives</h3>
+                <p>To understand derivatives, you must first understand slope. This is the same slope that you worked with in algebra courses, likely in the line formula <span class="inline-formula">y = mx + b</span>.</p>
+                <img src="formulas/linear_function.png" alt="graph of the line y=x">
+                <p>In this equation, <span class="inline-formula">m</span> is the value of the slope. But in an exponential function, the slope isn't constant, so <span class="inline-formula">m</span> becomes an equation rather than a number.
+                Think of the basic exponential equation <span class="inline-formula">y = x&sup2;<!-- exponential 2 --></span>.</p>
+                <img src="formulas/parabolic_function.png" alt="graph of the parabola y=x squared">
+                <p>As you move further in a horizontal direction, the vertical value increases exponentially.
+                In other words, the slope of the function increases as you move in that horizontal direction. This is why the derivative of an exponential function results in another equation--the slope is not constant like it would be in a line.
+                This is also why the derivative of a linear function will always result in a constant number; the slope is always the same throughout the line. In a similar fashion, the slope of a constant is always zero, so the derivative of a constant will always equal zero.</p>
+            </section>
+
+            <section id="explain-integration">
+                <h3>Integrals</h3>
+                <p>Also known as antiderivatives since they are effectively the opposite of derivatives, integrals can be used to find the value contained between a function and the x-axis or to analyze limits of functions.</p>
+                <p>Think again of a simple parabolic function.</p>
+                <img src="formulas/parabolic_function.png" alt="graph of a parabola">
+
+                <p>As you move from the left to the right, the value of the function fluctuates from positive to zero and back to positive again.
+                The antiderivative of a function with a power of 2 is a function with a power of 3. So think of a graph of a cubic function.</p>
+                <img src="formulas/cubic_function.png" alt="graph of a cubic function">
+
+                <p>Notice how the slope of the function starts out positive. In the middle of the function, the slope is zero, and then the slope becomes positive again.
+                Remember that the function with a power of two had positive <span class="inline-formula">y</span> values, then a <span class="inline-formula">y</span> value of zero, then positive <span class="inline-formula">y</span> values again!
+                This is why integrals are also referred to as antiderivatives: we found the function whose slope equals the function we were given.</p>
+            </section>
+        </main>
+    </body>
+</html>

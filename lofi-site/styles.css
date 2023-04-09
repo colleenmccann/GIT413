@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Zen+Old+Mincho&display=swap');
+
+/*
+color palette in hex
+
+light yellow #F4E8C1
+greenish blue #A0C1B9
+medium blue #70A0AF
+medium purple #706993
+dark purple #331E38
+*/
+
+html{
+    background-color: #F4E8C1;
+}
+
+body{
+    max-width: 1200px;
+    width: 85%;
+    min-width: 975px;
+    margin: 0 auto;
+    background-color: #A0C1B9;
+    font-family: 'Zen Old Mincho', 'Trebuchet MS', Georgia, serif;
+    font-style: italic;
+}
+
+header h1{
+    background-color: #331E38;
+    color: #A0C1B9;
+    font-family: 'Comfortaa', 'Trebuchet MS', Helvetica, sans-serif;
+    font-style: normal;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+header h2{
+    background-color: #331E38;
+    color: #A0C1B9;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #706993;
+    font-family: 'Comfortaa', 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    width: 100%;
+}
+
+nav ul li{
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+}
+
+nav a{
+    color: #A0C1B9;
+}
+
+nav a:hover{
+    color: #F4E8C1;
+}
+
+.invisible{
+    display: none;
+}
+
+#flexcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section > img{
+    width: 75%;
+}
+
+#previous{
+    display: flex;
+    color: #F4E8C1;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#previous > img{
+    width: 75%;
+}
+
+#next > img{
+    width: 80%;
+}
+
+#current{
+    color: #331E38;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -1.75%;
+    font-family: 'Comfortaa', 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+#current img{
+    margin-bottom: 10px;
+}
+
+#current h3{
+    color: #331E38;
+    background-color: #70A0AF;
+    padding: 15px 40px;
+}
+
+#current a{
+    color: #706993;
+    background-color: #F4E8C1;
+    font-family: 'Zen Old Mincho', 'Trebuchet MS', Georgia, serif;
+    padding: 10px;
+}
+
+#current a:hover{
+    opacity: 0.6;
+}
+
+#next{
+    display: flex;
+    color: #F4E8C1;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+img[alt~="button"]{
+    width: 80px;
+}
+
+img[alt~="rewind"]{
+    transform: rotateY(180deg); /* rewind and fast forward are originally the same image, needs to flip */
+}
+
+figure{
+    margin: 10%;
+    font-family: 'Comfortaa', 'Trebuchet MS', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+figure img{
+    opacity: 0.6;
+}
+
+figure img:hover{
+    opacity: 1;
+}
+
+#suggestions{
+    text-align: center;
+    color: #F4E8C1;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#suggestions ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    padding-inline-start: 0px; /* remove browser style */
+    justify-content: space-around;
+}
+
+#suggestions ul li{
+    display: flex;
+    align-items: flex-end;
+}
+
+#suggestions a img{
+    max-width: 150px;
+    width: 100%;
+    opacity: 1;
+}
+
+#suggestions a img:hover{
+    opacity: 0.6;
+}
+
+footer{
+    width: 100%;
+    background-color: #70A0AF;
+    color: #331E38;
+    display: flex;
+    justify-content: space-around;
+    font-style: italic;
+}

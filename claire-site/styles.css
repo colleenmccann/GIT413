@@ -1,0 +1,385 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+/* variables */
+:root{
+    --apple: #D74452;
+    --teal: #2D838D;
+    --beige: #DAD3B7;
+    --orange: #DB9F34;
+    --dark-orange: #DB8E36;
+}
+
+/* mobile/global styling */
+
+header{
+    background-color: var(--teal);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    justify-items: stretch;
+}
+
+header svg{
+    justify-self: right;
+}
+
+body{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+nav h2{
+    position: absolute;
+    left: -10000px;
+}
+
+nav{
+    opacity: 0;
+    text-align: right;
+    max-width: 0;
+    max-height: 0;
+}
+
+h3{
+    font-size: 3em;
+}
+
+#about, #books, #events{
+    text-align: center;
+    padding: 3em 0;
+}
+
+#about{
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--teal);
+    color: white;
+}
+
+#about h3, #about p{
+    backdrop-filter: brightness(70%);
+}
+
+#books{
+    background-color: var(--beige);
+}
+
+h4{
+    font-size: 1.5em;
+    color: black;
+}
+
+.book-summary{
+    padding: 1em 0;
+}
+
+.book-summary img{
+    max-width: 60%;
+}
+
+.year{
+    padding: 1em;
+}
+
+#events{
+    background-color: var(--apple);
+    color: white;
+}
+
+.locations, address, .locations a{
+    text-align: left;
+    padding: 1em;
+}
+
+.locations{
+    border-bottom: 1px solid white;
+}
+
+.locations a{
+    text-transform: uppercase;
+    margin-left: 1em;
+    padding: 1em 3em;
+    background-color: white;
+    border: 3px solid black;
+}
+
+#newsletter{
+    background-color: var(--orange);
+    padding: 1em;
+}
+
+#newsletter h3{
+    text-align: center;
+}
+
+form{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+input{
+    margin: 1em 0;
+}
+
+input[type=text]{
+    width: 90%;
+    padding: 1em;
+    border: 3px solid black;
+}
+
+input[type=email]{
+    width: 90%;
+    padding: 1em;
+    border: 3px solid black;
+}
+
+input[type=submit]{
+    width: 90%;
+    padding: 1em;
+    background-color: #444444;
+    border: 3px solid white;
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    margin: 1em;
+}
+
+::placeholder{
+    font-family: "Comfortaa", sans-serif;
+    color: black;
+}
+
+footer{
+    padding: 1em;
+    background-color: var(--beige);
+}
+
+footer h2{
+    font-size: 1.5em;
+}
+
+#icons{
+    padding: 1em 0;
+}
+
+#icons ul{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+}
+
+#icons ul li{
+    width: 2em;
+    justify-self: center;
+}
+
+#books-events{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 2em 0;
+}
+
+#book-list, #event-list{
+    background-color: white;
+    border: 3px solid black;
+}
+
+#privacy-terms{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#privacy-terms a{
+    padding: 2em 0;
+}
+
+#privacy-terms p{
+    grid-column-start: span 2;
+}
+
+
+/* medium/tablet styles */
+
+@media screen and (min-width: 700px) {
+    nav{
+        opacity: 1;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4em;
+    }
+
+    nav a{
+        color: white;
+        padding: 0.5em;
+    }
+
+    nav a:hover{
+        background-color: white;
+        border: 3px solid black;
+        color: black;
+        font-weight: bold;
+    }
+
+    header svg{
+        display: none;
+    }
+
+    #books, #events{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #books h3, #books>p, #events h3, #events>p{
+        grid-column-start: span 2;
+    }
+
+    #signup{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    #email-address{
+        grid-column-start: span 2;
+    }
+
+    input[type=email]{
+        width: 95%;
+    }
+
+    input[type=submit]{
+        grid-column-start: span 2;
+        width: 50%;
+        justify-self: center;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+        grid-gap: 1em;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    #privacy-terms{
+        grid-column-start: span 2;
+    }
+}
+
+/* large/desktop styles */
+
+@media screen and (min-width: 1100px) {
+    header{
+        justify-items: stretch;
+    }
+
+    #books, #events{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #books h3, #books>p, #events h3, #events>p{
+        grid-column-start: span 4;
+    }
+
+    #events section{
+        border: 0px;
+    }
+
+    #signup{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #email-address{
+        grid-column-start: span 1;
+    }
+
+    input[type=submit]{
+        grid-column-start: span 3;
+    }
+
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #privacy-terms{
+        grid-column-start: span 1;
+    }
+}

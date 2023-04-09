@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lo-fi | life's bgm</title>
+        <meta name="description" content="a music streaming page made for fluid/flexible layout practice. for educational purposes only">
+        <meta name="author" content="Colleen McCann">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>lo-fi</h1>
+            <h2>life's background music</h2>
+            <nav>
+                <h2 class="invisible">navigation</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">playlists</a></li>
+                    <li><a href="#">artists</a></li>
+                    <li><a href="#">ced's favorites</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="invisible">music player</h1>
+            <div id="flexcontainer">
+                <section id="previous">
+                    <h2 class="invisible">previous</h2>
+                    <img src="assets/late-night-vibes-4.jpeg" alt="late night vibes 4 cover">
+                    <figure>
+                        <a href="#"><img src="assets/rewind.png" alt="rewind button"></a>
+                        <figcaption>previous</figcaption>
+                    </figure>
+                </section>
+                <section id="current">
+                    <h2>now listening to</h2>
+                    <img src="assets/chillhop-spring19.jpeg" alt="chillhop essentials spring 2019 cover">
+                    <audio controls src="assets/Murmuration.mp3">your browser (or browser version) does not support the <code>audio</code> element.</audio>
+                    <h3>blue wednesday, shopan - murmuration</h3>
+                    <a href="https://chll.to/f7a72caa">more about this compilation</a>
+                </section>
+                <section id="next">
+                    <h2 class="invisible">next</h2>
+                    <figure>
+                        <a href="#"><img src="assets/fast-forward.png" alt="fast forward button"></a>
+                        <figcaption>next</figcaption>
+                    </figure>
+                    <img src="assets/super-lofi-world.jpeg" alt="super lofi world cover">
+                </section>
+            </div>
+
+            <section id="suggestions">
+                <h2>you may also like</h2>
+                <ul>
+                    <li><a href="#"><img src="assets/chillhop-fall21.jpeg" alt="chillhop essentials fall 2021 cover"></a></li>
+                    <li><a href="#"><img src="assets/at-cafe.jpeg" alt="at cafe mix cover"></a></li>
+                    <li><a href="#"><img src="assets/directions.jpeg" alt="directions album cover"></a></li>
+                    <li><a href="#"><img src="assets/chillhop-fall20.jpeg" alt="chillhop essentials fall 2020 cover"></a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>for educational purposes only.</p>
+            <p>colleen "ced" mccann 2021</p>
+        </footer>
+    </body>
+</html>

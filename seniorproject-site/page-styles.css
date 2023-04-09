@@ -1,0 +1,256 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+/* variables */
+
+:root{
+    --lightblue: #CEE0DC;
+    --greyblue: #B9CFD4; /* instances of this color were changed based on peer feedback */
+    --darkgrey: #2D2D2A;
+    --grey: #4C4C47;
+    --darkteal: #087E8B;
+    --champagne: #F0E2A3;
+}
+
+/* global (tablet) styles */
+
+body{
+    background-color: var(--lightblue);
+}
+
+header{
+    background-color: var(--darkgrey);
+    color: white;
+    font-family: automate, 'Lucida Sans', 'Segoe UI', serif;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+main{
+    font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    grid-row: 1 / 10;
+    background-color: var(--darkteal);
+    color: white;
+}
+
+nav h2{
+    position: absolute;
+    left: -99999px;
+}
+
+nav ul li{
+    padding: 1.5em 0.5em;
+    transition: background-color 400ms;
+}
+
+nav ul li:hover{
+    background-color: var(--darkgrey);
+}
+
+nav ul li a{
+    text-decoration: underline 2px rgba(0, 0, 0, 0);
+    transition: text-decoration-color 400ms;
+}
+
+nav ul li a:hover{
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+
+#current-page{
+    background-color: var(--greyblue);
+    color: black;
+    font-weight: bold;
+}
+
+main section{
+    grid-column-start: span 2;
+    padding: 1em;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h3{
+    padding: 1em 0 0 0;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+main p{
+    padding: 1em 0;
+}
+
+h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 1em;
+    transition: background-color 400ms;
+}
+
+h1:hover{
+    background-color: var(--darkteal);
+}
+
+header p{
+    margin: 2em;
+    font-size: 0.8em;
+}
+
+h2{
+    background-color: var(--champagne);
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    grid-column-start: span 2;
+    padding: 0.5em;
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+#explain-deriving img, #explain-integration img{
+    max-width: 50%;
+}
+
+.formula-graphic{
+    max-width: 30%;
+    padding: 1em;
+    background-color: white;
+}
+
+.rule-graphic{
+    max-width: 50%;
+    padding: 1em;
+    background-color: white;
+}
+
+#trig-fx img{
+    margin: 1em auto;
+    max-width: 30%;
+    padding: 1em;
+    background-color: white;
+}
+
+.arrow{
+    max-width: 50px;
+}
+
+.inline-formula{
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#tex-link{
+    text-decoration: underline 2px white;
+}
+
+
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    main{
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        max-width: 1400px;
+    }
+
+    nav ul li{
+        padding: 2em 1em;
+    }
+
+    h2{
+        grid-column-start: span 3;
+        padding-left: 1em;
+        text-align: left;
+    }
+    
+    section{
+        margin-bottom: 2em;
+    }
+}
+
+
+
+/* mobile styles */
+@media screen and (max-width: 800px){
+    body{
+        min-width: 450px;
+    }
+    nav{
+        position: absolute;
+        left: -99999px;
+    }
+
+    main section, main>h2 {
+        grid-column-start: span 3;
+    }
+
+    h3{
+        text-align: center;
+    }
+}

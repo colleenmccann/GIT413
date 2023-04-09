@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Solving Derivatives | A Tutor's Guide to Calculus</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Colleen McCann">
+        <meta name="description" content="An explanation on derivation of normal functions by using a standard formula. Derivatives of trigonometry functions are also provided for users to memorize.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="page-styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jmv0esy.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>A Tutor's Guide to Calculus</h1></a>
+            <p>For educational purposes only.<br>
+            Formula graphics made with the <a id="tex-link" href="https://atomurl.net/math/">TeX equation editor</a>.</p>
+        </header>
+
+        <main>
+            <nav>
+                <h2>Main Navigation</h2> <!-- hide -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="concepts.html">Understanding Derivatives &amp; Integrals</a></li>
+                    <li id="current-page"><a href="derivatives.html">Solving Derivatives</a></li>
+                    <li><a href="rules.html">Derivative Rules</a></li>
+                    <li><a href="integrals.html">Solving Integrals (Antiderivatives)</a></li>
+                    <!--<li><a href="using-calculators.html">Checking Answers with a Calculator</a></li>-->
+                </ul>
+            </nav>
+
+            <h2>Solving Derivatives</h2>
+
+            <section id="normal-fx">
+                <h3>Solving Normal Functions</h3> <!-- hide? -->
+                <p>A function to be derived will be preceded by</p>
+                <img class="formula-graphic" src="formulas/deriving_icon.png" alt="the notation for taking a derivative">
+
+                <p><span class="inline-formula">f'(x)</span> is often read as "f-prime of x". The number of apostrophes after <span class="inline-formula">f</span> indicates how many times the function has been, or should be, derived.
+                For example, finding <span class="inline-formula">f''(x)</span> requires deriving <span class="inline-formula">f(x)</span> twice.</p>
+                <p>In general, to find the derivative of a function, we use its values in the equation</p>
+                <img class="formula-graphic" src="formulas/derive_equation.png" alt="the formula to derive a function">
+
+                <p>It's that simple! For example, to find the derivative of the function</p>
+                <img class="formula-graphic" src="formulas/derivative_example1.png" alt="an example function">
+
+                <p>We can use that general deriving equation with the function's values</p>
+                <img class="formula-graphic" src="formulas/derive_equation.png" alt="the formula to derive a function">
+                <img class="arrow" src="formulas/down_arrow.png" alt="arrow pointing down">
+                <img class="formula-graphic" src="formulas/derivative_example2.png" alt="the example values plugged into the formula">
+
+                <p>To yield its derivative</p>
+                <img class="formula-graphic" src="formulas/derivative_example3.png" alt="the resulting derivative of the example equation">
+            </section>
+            
+            <section id="trig-fx">
+                <h3>Trig Functions</h3>
+                <p>Trigonometry functions (sine, cosine, etc.) behave in their own way. In my experience, it's best to just memorize the behavior of each function as it is derived. Here are a few main points to remember:</p>
+                <ul>
+                    <li>The derivative of a sine function is a cosine function with the same sign (positive or negative).</li>
+                    <li>The derivative of a cosine function is a sine function. However, the sign of the function will change from positive to negative or vice versa.</li>
+                    <li>When integrating a sine or cosine function, the behavior is swapped: integrating a sine function will change the function's sign, while integrating a cosine function will not.</li>
+                    <li>If you forget whether sine or cosine change the sign of the function, analyze how the slope changes in the function you derive!</li>
+                </ul>
+
+                <img src="formulas/derive_sine.png" alt="the value of the derivative of sine is cosine">
+                <img src="formulas/derive_cosine.png" alt="the value of the derivative of cosine is negative sine">
+                <img src="formulas/integrate_sine.png" alt="the value of the integral of sine is negative cosine">
+                <img src="formulas/integrate_cosine.png" alt="the value of the integral of cosine is sine">
+
+                <p>The more complex trigonometry functions (tangent, secant, etc.) behave a little more strangely when derived. It's very handy to memorize these, since the process of breaking them down into sine and cosine before deriving can get messy.
+                A good way to remember which trig functions change signs is to associate any function that has the prefix "co" with a sign change (cosine, cosecant, cotangent). Another tip that may help you remember these is that functions without "co", when derived, do not result in any formulas with "co".
+                The same can be said for the opposite: deriving a "co" function results in other "co" trig functions.</p>
+
+                <img src="formulas/derive_tangent.png" alt="the value of the derivative of tangent is secant squared x">
+                <img src="formulas/derive_cotangent.png" alt="the value of the derivative of cotangent is negative cosecant squared x">
+                <img src="formulas/derive_secant.png" alt="the value of the derivative of secant is secant x times tangent x">
+                <img src="formulas/derive_cosecant.png" alt="the value of the derivative of cosecant is negative cosecant x times cotangent x">
+            </section>
+        </main>
+    </body>
+</html>
